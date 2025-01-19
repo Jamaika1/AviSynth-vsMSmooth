@@ -520,7 +520,7 @@ static inline void maskedBlur3x3(void* dstpv, const void* srcpv, const void* mas
     }
 }
 
-static void copy_plane(PVideoFrame& dst, PVideoFrame& src, int plane, IScriptEnvironment* env)
+static inline void copy_plane(PVideoFrame& dst, PVideoFrame& src, int plane, IScriptEnvironment* env)
 {
     const uint8_t* srcp = src->GetReadPtr(plane);
     int src_pitch = src->GetPitch(plane);
